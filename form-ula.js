@@ -14,15 +14,21 @@ class FormUla {
       startBtn.innerText="Start";
       this.initBtn.appendChild(startBtn);
     }
+
+    // Add a tabindex to all elements
+
   }
 
   render() {
 
     //Add overlay
-    if(!document.querySelector('.form-ula-overlay')){
+    var overlay = document.querySelector('.form-ula-overlay')
+    if(!overlay){
       var overlay = document.createElement("DIV");
       overlay.className = "form-ula-overlay";
       document.body.appendChild(overlay);
+    } else {
+      overlay.style.display = 'block';
     }
 
     // Moving first form item to center
@@ -32,9 +38,10 @@ class FormUla {
     //assign focus to first item DIV
     this.formItems[0].querySelector(INPUT_SELECTOR).focus();
 
-    //inject Nav if nav div
-    if(!document.querySelector('.form-ula-nav')){
-      var nav = document.createElement("DIV");
+    //inject Nav
+    var nav = document.querySelector('.form-ula-nav');
+    if(!nav){
+      nav = document.createElement("DIV");
       nav.className = 'form-ula-nav';
 
       var prevBtnIcon = document.createElement("I");
@@ -50,6 +57,8 @@ class FormUla {
       nav.appendChild(prevBtnIcon);
       nav.appendChild(nextBtnIcon);
       document.querySelector('.form-ula').appendChild(nav);
+    }else{
+      nav.style.display = 'grid';
     }
 
     //add event listener for enter button on text elements
@@ -59,7 +68,16 @@ class FormUla {
     });
   }
 
-
+  //hide the formUla
+  hide () {
+    document.querySelector('.form-ula-overlay').style.display = 'none';
+    var current = document.querySelector('.form-ula-active');
+    current.className = current.className.replace(' form-ula-active','');
+    var nav = document.querySelector('.form-ula-nav')
+    if(nav){
+      nav.style.display = 'none';
+    }
+  }
 
   //Moves the form to the next form-ula element
   next () {
