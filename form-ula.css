@@ -4,6 +4,7 @@ body {
   background-repeat: no-repeat;
 }
 .form-ula-wrapper{
+  font-size: 100%;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -30,7 +31,8 @@ body {
 
 .form-ula-nav{
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
+  grid-row 1 / -1;
   order: 1;
   margin: 10px;
   z-index: 3;
@@ -50,7 +52,7 @@ body {
 }
 
 .form-ula-element{
-  display: none;
+  display: none
 }
 
 button, input, select, textarea {
@@ -60,8 +62,8 @@ button, input, select, textarea {
 
 .form-ula-active{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 50%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 60%;
   z-index: 3;
   font-size: 30pt;
   color: white;
@@ -69,34 +71,49 @@ button, input, select, textarea {
   grid-row-gap: 10px;
 }
 
-.form-ula-active button, input, select, textarea {
-  grid-column: 1 / span 2;
+.form-ula-2-column{
+  grid-column: span 2;
+}
+
+.form-ula-3-column{
+  grid-column: span 3;
+}
+
+.form-ula-4-column{
+  grid-column: span 4;
+}
+
+.form-ula-2-row{
+  grid-row: span 2;
+
+}
+
+.form-ula-3-row{
+  grid-row: span 3;
+
+}
+
+.form-ula-4-row{
+  grid-row: span 4;
+
 }
 
 .form-ula-active input{
-  background: none;
+  background-color: rgba(255, 255, 255, 0.2);
   border: none;
   padding-bottom: 10px;
   border-bottom: 2px solid white;
   color: white;
-  grid-column: 1 / span 2;
 }
 
 .form-ula-active input:focus{
-  background: none;
   outline:none;
   border: none;
   padding-bottom: 10px;
   border-bottom: 2px solid white;
-
 }
 
-.form-ula-active label{
-  order: 0;
-  grid-area: 1 / span 2;
-}
-
-.form-ula-active:focus-within {
+.form-ula-transition:focus-within {
   animation-name: slidein;
   animation-duration: 1.5s;
   animation-iteration-count: 1;

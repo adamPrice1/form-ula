@@ -9,7 +9,10 @@
   <script type="text/javascript">
 
     document.addEventListener('DOMContentLoaded', function() {
-      formUla = new FormUla();
+      formUla = new FormUla({
+        nextStepOnEnter: true,
+        includeConfirmationButton: false
+      });
     });
 
     </script>
@@ -29,37 +32,37 @@
 
     <div class="form-ula" >
 
-      <div class="form-ula-element" data-form-ula-order=0 tabindex="0">
-        <label> Age </label>
-        <input id="age"></input>
+      <div class="form-ula-element" data-form-ula-order=0 >
+        <label class="form-ula-1-column"> Age </label>
+        <input id="age" class="form-ula-4-column form-ula-4-row"></input>
+        <input id="age" class="form-ula-4-column"></input>
       </div>
-      <div class="form-ula-element" data-form-ula-order=1 tabindex="1">
+      <div class="form-ula-element" data-form-ula-order=1 >
         <label for="units"> Units: </label>
        <select id='units'>
          <option value='kg' selected>KG</option>
          <option value='lbs'>Lbs</option>
        </select>
       </div>
-      <div class="form-ula-element" data-form-ula-order=2 tabindex="2">
+      <div class="form-ula-element" data-form-ula-order=2 >
         <label> pAge </label>
         <input id="page"></input>
       </div>
-      <div class="form-ula-element" data-form-ula-order=3 tabindex="3">
+      <div class="form-ula-element" data-form-ula-order=3 >
         <label> sAge </label>
         <input id="sage"></input>
       </div>
-      <div class="form-ula-element" data-form-ula-order=4 tabindex="4">
+      <div class="form-ula-element" data-form-ula-order=4 >
         <label> cAge </label>
         <input id="cage"></input>
       </div>
-      <div class="form-ula-element" data-form-ula-order=5 tabindex="5">
+      <div class="form-ula-element" data-form-ula-order=5 >
         <label> cAge </label>
         <input id="fname" placeholder="First Name"></input>
         <input id="sname" placeholder="Second Name"></input>
       </div>
-      <div class="form-ula-element" data-form-ula-order=6 tabindex="6">
+      <div class="form-ula-element" data-form-ula-order=6 >
 
-        <button action="submit">Donezies</button>
       </div>
     </div>
   </div>
