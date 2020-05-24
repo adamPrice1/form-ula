@@ -20,7 +20,7 @@ class FormUla {
       this.options = {...this.defaultOptions,...options};
       console.log({...this.defaultOptions,...options})
     }else{
-      this.options = defaultOptions;
+      this.options = this.defaultOptions;
     }
 
     // Add a tabindex to all formUla elements
