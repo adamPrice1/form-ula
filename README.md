@@ -83,7 +83,9 @@ Example: label + input on one line
         <input id="name" class="form-ula-3-column"></input>
       </div>
 ```
-![form layout demo](https://screenshot.click/24-15-ywpd0-fc3my.jpg)
+![form layout demo](https://screenshot.click/24-16-wwpkf-bm5wm.jpg)
+
+The same classes are available for rows, although there is no set number of rows!
 
 # Configuration options
 
