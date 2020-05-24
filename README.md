@@ -8,7 +8,7 @@ Allowing you to get beautiful, performant forms off the ground incredibly quickl
 
 Currently formula is built on a step-based interface for example:
 
-![Form-ula demo](https://codepen.io/poppadam/pen/PoPLZpY)
+[Form-ula demo](https://codepen.io/poppadam/pen/PoPLZpY)
 
 # Features
 
